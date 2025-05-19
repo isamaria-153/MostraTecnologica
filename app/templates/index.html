@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Análise de Sentimento</h1>
+        
+        <div>
+            <label for="comentario">Digite um texto para analisar:</label>
+            <textarea id="comentario" rows="4" placeholder="Ex: Adorei o produto, superou minhas expectativas!"></textarea>
+        </div>
+        
+        <button id="analisar-btn" onclick="analisar()">Analisar Sentimento</button>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analisando sentimento...</p>
+        </div>
+        
+        <div class="result" id="result">
+            <h2>Resultado:</h2>
+            <p>O sentimento do texto é: <span id="sentimento"></span></p>
+        </div>
+    </div>
+
+    <script>
+        async function analisar() {
+            const texto = document.getElementById("comentario").value.trim();
+            
+            if (!texto) {
+                alert("Por favor, digite um texto para analisar.");
+                return;
+            }
+            
+            const analisarBtn = document.getElementById("analisar-btn");
+            const loading = document.getElementById("loading");
+            const result = document.getElementById("result");
+            const sentimentoSpan = document.getElementById("sentimento");
+            
+            // Mostrar loading e desabilitar botão
+            analisarBtn.disabled = true;
+            loading.classList.add("visible");
+            result.classList.remove("visible");
+            
+            try {
+                const resposta = await fetch("/sentimento", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ texto: texto })
+                });
+                
+                if (!resposta.ok) {
+                    throw new Error("Erro ao analisar sentimento");
+                }
+                
+                const dados = await resposta.json();
+                
+                // Remover classes anteriores
+                sentimentoSpan.className = "";
+                
+                // Adicionar classe baseada no sentimento
+                sentimentoSpan.classList.add(dados.sentimento);
+                
+                // Mostrar resultado
+                sentimentoSpan.textContent = dados.sentimento.charAt(0).toUpperCase() + dados.sentimento.slice(1);
+                result.classList.add("visible");
+                
+            } catch (erro) {
+                console.error("Erro:", erro);
+                sentimentoSpan.className = "erro";
+                sentimentoSpan.textContent = "Erro ao analisar sentimento";
+                result.classList.add("visible");
+            } finally {
+                // Esconder loading e habilitar botão
+                loading.classList.remove("visible");
+                analisarBtn.disabled = false;
+            }
+        }
+    </script>
+    
+</body>
+</html>
