@@ -19,6 +19,7 @@ async def analisar(comentario: Comentario):
     adicionar_item(comentario.texto, sentimento)
     return {"sentimento": sentimento}
 
-@app.get("/fila")
-async def fila():
-    return listar_comentarios()
+@app.get("/fila", response_class=HTMLResponse)
+async def fila(request: Request):
+    lista = listar_comentarios() 
+    return templates.TemplateResponse("fila_lista.html", {"request": request, "lista": lista})
