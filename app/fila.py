@@ -7,6 +7,8 @@ def adicionar_item(comentario: str, sentimento: str):
          "comentario": comentario,
          "sentimento": sentimento,
     })
+    with open("comentario.txt", "a", encoding= "utf-8") as f:
+        f.write(comentario + " =  "+ sentimento + "\n")
 
 def listar_comentarios():
     coments = []
@@ -14,7 +16,7 @@ def listar_comentarios():
         if "comentario" in item and "sentimento" in item:
             coments.append(item)
 
-        return(coments)
+    return(coments)
     
     
 print("ok!")
