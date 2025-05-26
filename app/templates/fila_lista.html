@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar comentario</title>
+    <title>React Manager: Fila comentarios</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/src/ReactManager.jpeg">
 </head>
 <body>
-    <script>
-        
-    </script>
+    <div class="container">
+        <h1>Fila</h1>
+        <ul>
+            {% for comentario in lista %}
+                <li>{{comentario}}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
