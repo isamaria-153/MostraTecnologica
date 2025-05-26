@@ -29,11 +29,3 @@ def analisar_sentimento(texto):
         return "erro"
 
         
-""" # Criar diretório para cache de modelos se não existir
-os.makedirs("models", exist_ok=True)
-
-# Configurar o cache do modelo para usar o diretório local
-os.environ["TRANSFORMERS_CACHE"] = os.path.abspath("models")
-
-# Inicializar o pipeline de análise de sentimento
-# Isso baixará o modelo na primeira execução """
