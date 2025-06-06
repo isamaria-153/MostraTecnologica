@@ -1,46 +1,124 @@
-# REACT MANAGER: projeto analisador de sentimento
-O objetivo do projeto é desenvolver um sistema capacitado para captar dados, analisar e gerenciar opiniões positivas ou negativas provenientes de comentários de usuários em redes sociais. O projeto buscará implementar técnicas de mineração de dados para classificar esses sentimentos e Processamento de Linguagem Natural, transportando comentários de uma determinada publicação para a sua análise sendo: "Positivo", "Negativo", "Neutro", podendo não identificar uma irônia (linguagem da atual geração).
+# 🚀 ReactManager
 
-## Diretório de Modelos
+**Resumo:** Descreva aqui em 2 ou 3 linhas o propósito geral do seu projeto. Explique de forma clara e objetiva a solução proposta e seu contexto de aplicação.
 
-Este diretório armazena os modelos baixados pela biblioteca Transformers.
-Seu ambiente de criação será o "venv"
+---
 
-## Como Executar a Aplicação
-### Pré-requisitos
-bibliotecas necessárias estão no "requirements.txt" e são:
-- `fastapi==0.104.1`
-- `uvicorn==0.23.2`
-- `jinja2==3.1.2`
-- `transformers==4.35.0`
-- `torch==2.1.0`
-- `sentencepiece==0.1.99`
-- `protobuf==4.24.4`
+## 🎯 Objetivo
 
-terminal necessário: Command Prompt
+Projeto analisador de sentimento, o objetivo do projeto é desenvolver um sistema capacitado para captar dados, analisar e gerenciar opiniões positivas ou negativas provenientes de comentários de usuários em redes sociais. O projeto buscará implementar técnicas de mineração de dados para classificar esses sentimentos e Processamento de Linguagem Natural, transportando comentários de uma determinada publicação para a sua análise sendo: "Positivo", "Negativo", "Neutro", podendo não identificar uma irônia (linguagem da atual geração). Em Estrutura de Dados, o ReactManager tem como parâmetro o algoritmo FIFO (first' in, first' out / primeiro a entrar último a sair) FILA, utilizada como organização de dados também.
+
+ 
+
+---
+
+## 👨‍💻 Tecnologias Utilizadas
+
+Liste as principais tecnologias, linguagens, frameworks e bibliotecas utilizadas:
+
+- Python 3.12 / Java / C++
+- Streamlit / FastAPI / Flask
+- SQLite / PostgreSQL
+- React / HTML + CSS + JS
+- Graphviz / NetworkX (caso use grafos)
+- Outros...
+
+---
+
+## 🗂️ Estrutura do Projeto
+
+Caso o projeto tenha uma estrutura de pastas significativa, insira aqui um diagrama com os diretórios principais:
+
+A estrutura a seguir é um exemplo. Vocês devem usar a estrutura do seu projeto obrigatóriamente. 
+```
+📦 nome-do-projeto
+├── 📁 app
+│   ├── main.py
+│   ├── models/
+│   ├── views/
+│   └── utils/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## ⚙️ Como Executar
+
+### ✅ Rodando Localmente
+
+1. Clone o repositório:
+
+```
+git clone https://github.com/seu-usuario/seu-projeto.git
+cd nome-do-projeto
+```
+
+2. Crie o ambiente virtual e ative:
+
+```
+python -m venv venv
+source venv/bin/activate  # ou venv\Scripts\activate no Windows
+```
+
+3. Instale as dependências:
+
+```
+pip install -r requirements.txt
+```
+
+4. Execute a aplicação:
+
+```
+python main.py
+```
+
+---
+
+## 📸 Demonstrações
+
+Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do sistema:
+
+- Tela inicial
+- Exemplo de funcionalidade
+- Resultados esperados
+
+---
+
+## 👥 Equipe
+
+| Nome | GitHub |
+|------|--------|
+| Fulano da Silva | [@fulano](https://github.com/fulano) |
+| Ciclano Souza | [@ciclano](https://github.com/ciclano) |
+
+---
+
+## 🧠 Disciplinas Envolvidas
+
+- Estrutura de Dados I
+- Teoria dos Grafos
+- Linguagens Formais e Autômatos
+
+---
+
+## 🏫 Informações Acadêmicas
+
+- Universidade: **Universidade Braz Cubas**
+- Curso: **Ciência da Computação / Análise e Desenvolvimento de Sistemas**
+- Semestre: 2º / 3º / 4º / 5º / 6º
+- Período: Manhã / Noite
+- Professora orientadora: **Dra. Andréa Ono Sakai**
+- Evento: **Mostra de Tecnologia 1º Semestre de 2025**
+- Local: Laboratório 12
+- Datas: 05 e 06 de junho de 2025
+
+---
+
+## 📄 Licença
+
+MIT License — sinta-se à vontade para utilizar, estudar e adaptar este projeto.
 
 
-### Passo a Passo
-Instalando o venv: 
- `python -m venv venv`
 
 
- • Ativando o venv:
-Entrar no terminal no vscode (Command prompt, no power shell da erro) na pasta geral digite o comando:
-`venv\Scripts\activate`
-
- • Depois instale todos os requerimentos:
-`pip install -r requirements.txt`
-
-(Caso de erro, instale individualmente "pip install fastapi" ai vai ter que instalar todos, uvicorn, transformers...)
-
-• Rode a api (certifique que o caminho esteja na pasta principal do projeto a APP pegando todos as outras pastas: app e venv( APP: app, venv)
-
-`uvicorn app:app --reload`
-
-
-• No terminal irá aparecer o endpoint, copie ele e cole no terminal adicionando /sent
-
-(http://127.0.0.1:8000/)
-
-• Teste com algum comentário na api online, mas deixe o terminal do vs code aberto para compilar.
