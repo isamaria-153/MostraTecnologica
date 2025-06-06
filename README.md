@@ -31,14 +31,22 @@ Caso o projeto tenha uma estrutura de pastas significativa, insira aqui um diagr
 
 A estrutura a seguir é um exemplo. Vocês devem usar a estrutura do seu projeto obrigatóriamente. 
 ```
-📦 nome-do-projeto
+📦 ReactManager
 ├── 📁 app
-│   ├── main.py
-│   ├── models/
-│   ├── views/
-│   └── utils/
-├── README.md
-└── requirements.txt
+│   ├── 📁 static
+│   │   ├── 📁 src
+│   │   │   └── style.css
+│   │   └── 📁 templates
+│   │        ├── fila_lista.html
+│   │        └── index.html
+│   ├── _init_.py
+│   ├── fila.py
+│   ├── routes.py
+│   ├── run.py
+│   ├── sentiment.py
+│   └── 📁 venv
+│       ├── comentário.txt
+└──     └── requeriments.txt
 ```
 
 ---
