@@ -1,6 +1,6 @@
 # 🚀 ReactManager
 
-**Resumo:** Descreva aqui em 2 ou 3 linhas o propósito geral do seu projeto. Explique de forma clara e objetiva a solução proposta e seu contexto de aplicação.
+**REACT MANAGER:** Análise de sentimento
 
 ---
 
@@ -16,12 +16,9 @@ Projeto analisador de sentimento, o objetivo do projeto é desenvolver um sistem
 
 Liste as principais tecnologias, linguagens, frameworks e bibliotecas utilizadas:
 
-- Python 3.12 / Java / C++
-- Streamlit / FastAPI / Flask
-- SQLite / PostgreSQL
-- React / HTML + CSS + JS
-- Graphviz / NetworkX (caso use grafos)
-- Outros...
+- Python 3.12  
+- FastAPI 
+-  HTML + CSS 
 
 ---
 
@@ -58,7 +55,8 @@ A estrutura a seguir é um exemplo. Vocês devem usar a estrutura do seu projeto
 1. Clone o repositório:
 
 ```
-git clone https://github.com/seu-usuario/seu-projeto.git
+[git clone ](https://github.com/isamaria-153/MostraTecnologica)
+
 cd nome-do-projeto
 ```
 
@@ -78,44 +76,30 @@ pip install -r requirements.txt
 4. Execute a aplicação:
 
 ```
-python main.py
+uvicorn app:app --reload
 ```
-
----
-
-## 📸 Demonstrações
-
-Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do sistema:
-
-- Tela inicial
-- Exemplo de funcionalidade
-- Resultados esperados
-
----
 
 ## 👥 Equipe
 
 | Nome | GitHub |
 |------|--------|
-| Fulano da Silva | [@fulano](https://github.com/fulano) |
-| Ciclano Souza | [@ciclano](https://github.com/ciclano) |
+| Maria Beatriz
+| Isabelly |
 
 ---
 
 ## 🧠 Disciplinas Envolvidas
 
 - Estrutura de Dados I
-- Teoria dos Grafos
-- Linguagens Formais e Autômatos
 
 ---
 
 ## 🏫 Informações Acadêmicas
 
 - Universidade: **Universidade Braz Cubas**
-- Curso: **Ciência da Computação / Análise e Desenvolvimento de Sistemas**
-- Semestre: 2º / 3º / 4º / 5º / 6º
-- Período: Manhã / Noite
+- Curso: **Ciência da Computação**
+- Semestre:3º 
+- Período:  Noite
 - Professora orientadora: **Dra. Andréa Ono Sakai**
 - Evento: **Mostra de Tecnologia 1º Semestre de 2025**
 - Local: Laboratório 12
